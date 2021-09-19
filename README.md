@@ -37,10 +37,15 @@ import DialogInput from 'react-native-dialog-input';
  hintTextColor         | Color of the text hint                      |   String (OPTIONAL)
  initValueTextInput    | Default value for the TextInput             |   String (OPTIONAL)
  textInputProps        | Additional properties to add to the TextInput in the form:<BR> `textInputProps={{autoCorrect:false}}`  Currently supports:<BR>autoCorrect<BR>autoCapitalize<BR>clearButtonMode<BR>clearTextOnFocus<BR>keyboardType<BR>secureTextEntry<BR>maxLength           |    Object (OPTIONAL)
-modalStyle   | Styles for the blocking view behind the DialogInput             |   Object (OPTIONAL)
-dialogStyle             | Styles for the DialogInput main view                        |   Object (OPTIONAL)
-cancelText             | Replacement text for the Cancel button      |   String (OPTIONAL)
-submitText             | Replacement text for the Submit button      |   String (OPTIONAL)
+ modalStyle            | Styles for the blocking view behind the DialogInput             |   Object (OPTIONAL)
+ dialogStyle           | Styles for the DialogInput main view        |   Object (OPTIONAL)
+ cancelText            | Replacement text for the Cancel button      |   String (OPTIONAL)
+ submitText            | Replacement text for the Submit button      |   String (OPTIONAL)
+ inputMaxLength        | Maximum allowed characters for input text   |   String (OPTIONAL)
+ inputSecureTextEntry  | If true, the text input obscures the text entered so that sensitive text like passwords stay secure      |   Boolean (OPTIONAL)
+ inputStyle            | Styles for the input field                  |   Object (OPTIONAL)
+ cancelStyle           | Styles for the cancel button                |   Object (OPTIONAL)
+ submitStyle           | Styles for the submit button                |   Object (OPTIONAL)
 
 ## Methods
 

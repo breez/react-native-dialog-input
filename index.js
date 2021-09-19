@@ -51,7 +51,7 @@ class DialogInput extends PureComponent{
     const textProps = this.props.textInputProps || null;
     const modalStyleProps = this.props.modalStyle || {};
     const dialogStyleProps = this.props.dialogStyle || {};
-    const placeholderTextColor = this.props.placeholderTextColor
+    const hintTextColor = this.props.hintTextColor
     const animationType = this.props.animationType || 'fade';
     let cancelText = this.props.cancelText || 'Cancel';
     let submitText = this.props.submitText || 'Submit';
@@ -82,7 +82,7 @@ class DialogInput extends PureComponent{
                   onKeyPress={this.handleOnKeyPress}
                   underlineColorAndroid='transparent'
                   placeholder={hintInput}
-                  placeholderTextColor={placeholderTextColor}
+                  hintTextColor={hintTextColor}
                   onChangeText={this.handleOnChangeText}
                   value={value}
                   secureTextEntry={this.props.inputSecureTextEntry}
