@@ -12,7 +12,7 @@ import {
 class DialogInput extends PureComponent{
   constructor(props){
     super(props);
-    this.state = { inputModal: props.initValueTextInput, openning: true, maxLength: this.props.inputMaxLength || 90 };
+    this.state = { inputModal: props.initValueTextInput, openning: true };
   }
 
   handleOnRequestClose = () => {
@@ -68,7 +68,7 @@ class DialogInput extends PureComponent{
           <TouchableOpacity style={styles.container} activeOpacity={1} onPress={this.handleOnCloseDialog}>
             <View style={[styles.modal_container, {...dialogStyleProps}]} >
               <View style={styles.modal_body} >
-                <Text style={styles.title_modal}>{title}</Text>
+                <Text style={styles.titleStyle}>{title}</Text>
                 <Text style={[this.props.message ? styles.message_modal : {height:0} ]}>{this.props.message}</Text>
                 <TextInput style={this.props.inputStyle}
                   autoCorrect={(textProps && textProps.autoCorrect==false)?false:true}
@@ -86,7 +86,6 @@ class DialogInput extends PureComponent{
                   onChangeText={this.handleOnChangeText}
                   value={value}
                   secureTextEntry={this.props.inputSecureTextEntry}
-                  maxLength={this.state.maxLength}
                   />
               </View>
               <View style={styles.btn_container}>
@@ -145,20 +144,6 @@ const styles = StyleSheet.create({
       },
       android: {
         padding: 24,
-      },
-    }),
-  },
-  title_modal:{
-    fontWeight: 'bold',
-    fontSize: 20,
-    ...Platform.select({
-      ios: {
-        marginTop: 10,
-        textAlign:'center',
-        marginBottom: 5,
-      },
-      android: {
-        textAlign:'left',
       },
     }),
   },
