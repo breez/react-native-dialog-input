@@ -68,7 +68,7 @@ class DialogInput extends PureComponent{
           <TouchableOpacity style={styles.container} activeOpacity={1} onPress={this.handleOnCloseDialog}>
             <View style={[styles.modal_container, {...dialogStyleProps}]} >
               <View style={styles.modal_body} >
-                <Text style={styles.titleStyle}>{title}</Text>
+                <Text style={this.props.titleStyle}>{title}</Text>
                 <Text style={[this.props.message ? styles.message_modal : {height:0} ]}>{this.props.message}</Text>
                 <TextInput style={this.props.inputStyle}
                   autoCorrect={(textProps && textProps.autoCorrect==false)?false:true}
@@ -91,12 +91,12 @@ class DialogInput extends PureComponent{
               <View style={styles.btn_container}>
                 <TouchableOpacity style={styles.touch_modal}
                   onPress={this.handleOnCloseDialog}>
-                  <Text style={styles.cancelStyle}>{cancelText}</Text>
+                  <Text style={this.props.cancelStyle}>{cancelText}</Text>
                 </TouchableOpacity>
                 <View style={styles.divider_btn}></View>
                 <TouchableOpacity  style={styles.touch_modal}
                   onPress={this.handleSubmit}>
-                  <Text style={styles.submitStyle}>{submitText}</Text>
+                  <Text style={this.props.submitStyle}>{submitText}</Text>
                 </TouchableOpacity>
               </View>
             </View>
